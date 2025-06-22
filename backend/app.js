@@ -11,6 +11,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Configure CORS to allow requests from the specified origin
+
+app.use(cors({
+  origin: 'https://inkwave-img.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
