@@ -24,8 +24,8 @@ app.get('/', (req, res) => {
 });
 
 // Define route
-app.use("api/user", authRouter);
-app.use("api/image", imageRouter);
+app.use("/api/user", authRouter);
+app.use("/api/image", imageRouter);
 
 
 app.listen(port, () => {
